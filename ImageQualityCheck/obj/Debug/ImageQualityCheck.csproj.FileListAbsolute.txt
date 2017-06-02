@@ -27,3 +27,5 @@ D:\KodeProgram\CheckingStego\ImageQualityCheck\obj\Debug\Views\About\AboutMe.bam
 D:\KodeProgram\CheckingStego\ImageQualityCheck\obj\Debug\Views\About\AppDetail.baml
 D:\KodeProgram\CheckingStego\ImageQualityCheck\obj\Debug\Views\About\AboutMe.g.cs
 D:\KodeProgram\CheckingStego\ImageQualityCheck\obj\Debug\Views\About\AppDetail.g.cs
+D:\KodeProgram\PictDIFFER\ImageQualityCheck\obj\Debug\ImageQualityCheck.exe
+D:\KodeProgram\PictDIFFER\ImageQualityCheck\obj\Debug\ImageQualityCheck.pdb

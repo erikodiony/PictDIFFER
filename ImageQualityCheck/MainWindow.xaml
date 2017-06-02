@@ -1,0 +1,34 @@
+﻿<mui:ModernWindow x:Class="ImageQualityCheck.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="PictDIFFER (Check &amp; Compare Quality of Picture)" IsTitleVisible="True"
+        ContentSource="/Views/Home/StartPage.xaml" WindowStartupLocation="CenterScreen" Width="925" Height="650" ResizeMode="NoResize" Icon="Images/Logo.png">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="home">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Start Page" Source="/Views/Home/StartPage.xaml" />
+                <mui:Link DisplayName="Getting Started" Source="/Views/Home/GettingStarted.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="quality check">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Histogram" Source="/Views/QualityCheck/Histogram.xaml" />
+                <mui:Link DisplayName="Pixel Lookup" Source="/Views/QualityCheck/PixelLookup.xaml" />
+                <mui:Link DisplayName="MSE &amp; PSNR" Source="/Views/QualityCheck/MSEandPSNR.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="Background / Theme" Source="/Views/Settings/BackgroundAndTheme.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="about">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="App Detail" Source="/Views/About/AppDetail.xaml" />
+                <mui:Link DisplayName="About Me" Source="/Views/About/AboutMe.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+</mui:ModernWindow>

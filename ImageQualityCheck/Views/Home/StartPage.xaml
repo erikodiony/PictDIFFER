@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="ImageQualityCheck.Views.Home.StartPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d">
+    <Grid Style="{StaticResource ContentRoot}">
+        <StackPanel>
+            <!--Header Area-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="0" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="1" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="2" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="3" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                <Rectangle Grid.Row="1" Grid.ColumnSpan="4" Height="3" Width="450" Margin="150,10,150,10" Fill="Gray"/>
+            </Grid>
+            <!--Header Area-->
+
+            <!--Main Area-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Column 1-->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="&#xE1C3;" Margin="15,20,15,0" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" FontSize="30"/>
+                </StackPanel>
+                <!--Column 1-->
+
+                <!--Column 2-->
+                <Rectangle Grid.Column="1" Margin="15,20,0,20" Width="3" Height="Auto" Fill="Gray"/>
+                <!--Column 2-->
+
+                <!--Column 3 / Content Area-->
+                <ScrollViewer Grid.Column="2" Margin="15,20,0,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
+                        <Run FontWeight="SemiBold">PictDIFFER</Run> merupakan aplikasi yang berfungsi untuk mengecek dan membandingkan kualitas suatu Citra Digital hasil pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>.
+                    Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
+                        </TextBlock>
+
+                        <TextBlock Margin="15,5,15,5" FontSize="30">
+                            <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
+                            <Run Text="Feature + Benefit"/>
+                        </TextBlock>
+                        
+                        <TextBlock Margin="10,10,15,10" FontSize="18">                            
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Using Metro UI like Windows 8 Metro Apps Design" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>    
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Build with Windows WPF (C# &amp; XAML)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Support on All Windows PC (7,8,10)" FontWeight="SemiBold" FontStretch="SemiCondensed"/>
+                        </TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
+                <!--Column 3 / Content Area-->
+            </Grid>
+            <!--Main Area-->
+                
+        </StackPanel>
+    </Grid>
+</UserControl>

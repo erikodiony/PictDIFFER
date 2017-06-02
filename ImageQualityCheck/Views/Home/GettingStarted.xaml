@@ -1,0 +1,111 @@
+﻿<UserControl x:Class="ImageQualityCheck.Views.Home.GettingStarted"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d">
+    <Grid Style="{StaticResource ContentRoot}">
+            <StackPanel>
+                <!--Header Area-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="0" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="1" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="2" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="3" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Rectangle Grid.Row="1" Grid.ColumnSpan="4" Height="3" Width="450" Margin="150,10,150,10" Fill="Gray"/>
+                </Grid>
+                <!--Header Area-->
+
+                <!--Main Area-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!--Column 1-->
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="&#xE128;" Margin="15,20,15,0" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" FontSize="30"/>
+                    </StackPanel>
+                    <!--Column 1-->
+
+                    <!--Column 2-->
+                    <Rectangle Grid.Column="1" Margin="15,20,0,20" Width="3" Height="Auto" Fill="Gray"/>
+                    <!--Column 2-->
+
+                    <!--Column 3 / Content Area-->
+                    <ScrollViewer Grid.Column="2" Margin="15,20,0,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
+                                Terdapat 3 Fitur yang menjadi fungsi dasar dari aplikasi ini antara lain <Run FontWeight="SemiBold">Histogram</Run>, <Run FontWeight="SemiBold">Pixel Lookup</Run> dan <Run FontWeight="SemiBold">MSE &amp; PSNR</Run>.
+                            </TextBlock>
+
+                        <!--Line Separator-->
+                        <Rectangle Height="3" Width="75" Margin="150,10,150,10" Fill="Gray"/>
+                        <!--Line Separator-->
+
+                        <Grid Margin="15,0,15,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" FontSize="30">
+                                    <Run Text="&#xE9D2;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="Histogram"/>
+                            </TextBlock>
+                            <TextBlock Grid.Row="1" FontSize="18" TextWrapping="Wrap">
+                                        Merupakan Fitur yang berfungsi untuk melihat komposisi warna sesuai dengan warna dasar dari Citra Digital berkedalaman 32bit, yakni (BGRA / Blue, Green, Red, Alpha)
+                            </TextBlock>
+
+                            <!--Line Separator-->
+                            <Rectangle Grid.Row="2" Height="3" Width="150" Margin="150,25,150,10" Fill="Gray"/>
+                            <!--Line Separator-->
+
+                            <TextBlock Grid.Row="3" FontSize="30">
+                                <Run Text="&#xF0B9;" FontFamily="Segoe MDL2 Assets"/>
+                                <Run Text="Pixel Lookup"/>
+                            </TextBlock>
+                            <TextBlock Grid.Row="4" FontSize="18" TextWrapping="Wrap">
+                                        Merupakan Fitur yang berfungsi untuk melihat komposisi warna dasar dari Citra Digital berkedalaman 32bit, yakni (BGRA / Blue, Green, Red, Alpha) pada titik-titik Pixel tertentu.
+                            </TextBlock>
+
+                            <!--Line Separator-->
+                            <Rectangle Grid.Row="5" Height="3" Width="150" Margin="150,25,150,10" Fill="Gray"/>
+                            <!--Line Separator-->
+
+                            <TextBlock Grid.Row="6" FontSize="30">
+                                    <Run Text="&#xEB3C;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="MSE &amp; PSNR"/>
+                            </TextBlock>
+                            <TextBlock Grid.Row="7" FontSize="18" TextWrapping="Wrap">
+                                MSE <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Mean Square Error)"/> adalah nilai error kuadrat rata-rata antara Citra Digital hasil Pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>. Adapun PSNR <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Peak Signal Noise Ratio)"/> adalah perbandingan antara nilai maksimum dari sinyal yang diukur dengan besarnya derau yang berpengaruh pada sinyal tersebut. PSNR biasanya diukur dalam satuan <Run FontWeight="SemiBold" FontStyle="Italic" Text="Decibel / (db)"/>. MSE &amp; PSNR biasa digunakan untuk mengetahui hasil/kualitas teknik Steganografi yang digunakan. Dengan parameter yang digunakan yakni selisih antara nilai <Run FontWeight="SemiBold" FontStyle="Italic" Text="Pixel"/> Citra Digital asli sebelumnya <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/> dan Citra Digital sesudah diolah <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/>.
+                            </TextBlock>
+                        </Grid>
+                            
+                    </StackPanel>
+                    </ScrollViewer>
+                    <!--Column 3 / Content Area-->
+                </Grid>
+                <!--Main Area-->
+
+            </StackPanel>
+    </Grid>
+</UserControl>

@@ -28,14 +28,17 @@
                 <Rectangle Grid.ColumnSpan="6" Grid.RowSpan="3" Margin="0,0,0,0" Stroke="Gray" Height="Auto" Width="Auto" StrokeThickness="2" StrokeDashArray="4 4"/>
 
                 <TextBlock Grid.Column="0" Grid.Row="0" Margin="18,5,10,5" Text="Choose Cover Image :" FontWeight="SemiBold"/>
-                <Button Grid.Column="0" Grid.Row="1" Margin="18,0,10,0" Height="30" Width="110" Content="Cover Image" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Image Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Width="185" Height="185" Margin="20,-15,20,10" Source="/ImageQualityCheck;component/Images/PictDIFFER.jpg"/>
-
+                <Button Grid.Column="0" Grid.Row="1" Margin="18,0,10,0" Height="30" Width="110" Content="Cover Image" HorizontalAlignment="Left" VerticalAlignment="Top" Name="histo_btn_cover"/>
+                <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Width="185" Height="185" Margin="20,-15,20,10" BorderThickness="1" BorderBrush="Black" Background="Gray">
+                    <Image Name="histo_img_cover"/>
+                </Border>
                 <Rectangle Grid.Column="2" Width="3" Margin="10,10,15,10" Grid.RowSpan="3" Fill="Gray"/>
 
                 <TextBlock Grid.Column="3" Grid.Row="0" Margin="10,5,10,5" Text="Choose Stego Image :" FontWeight="SemiBold"/>
-                <Button Grid.Column="3" Grid.Row="1" Margin="10,0,10,0" Height="30" Width="110" Content="Stego Image" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Image Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Width="185" Height="185" Margin="20,-15,20,10" Source="/ImageQualityCheck;component/Images/PictDIFFER.jpg"/>
+                <Button Grid.Column="3" Grid.Row="1" Margin="10,0,10,0" Height="30" Width="110" Content="Stego Image" HorizontalAlignment="Left" VerticalAlignment="Top" Name="histo_btn_stego"/>
+                <Border Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Width="185" Height="185" Margin="20,-15,20,10" BorderThickness="1" BorderBrush="Black" Background="Gray">
+                    <Image Name="histo_img_stego"/>
+                </Border>
             </Grid>
             <!--Header Area-->
             
@@ -58,30 +61,72 @@
 
                 <!--Column 3 / Content Area-->
                 <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                    <StackPanel>
-                        <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
-                        <Run FontWeight="SemiBold">PictDIFFER</Run> merupakan aplikasi yang berfungsi untuk mengecek dan membandingkan kualitas suatu Citra Digital hasil pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>.
-                    Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
-                        </TextBlock>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
 
-                        <TextBlock Margin="15,5,15,5" FontSize="30">
-                            <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
-                            <Run Text="Feature + Benefit"/>
-                        </TextBlock>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Cover Image"/>
+                        <GroupBox Grid.Column="0" Grid.Row="1" Header="Luminosity" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding LuminanceHistogramPoints}" Stretch="Fill" Fill="Black" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
+                        <GroupBox Grid.Column="0" Grid.Row="2" Header="Red" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding RedColorHistogramPoints}" Stretch="Fill" Fill="Red" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
+                        <GroupBox Grid.Column="0" Grid.Row="3" Header="Green" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding GreenColorHistogramPoints}" Stretch="Fill" Fill="Green" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
+                        <GroupBox Grid.Column="0" Grid.Row="4" Header="Blue" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding BlueColorHistogramPoints}" Stretch="Fill" Fill="Blue" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
 
-                        <TextBlock Margin="10,10,15,10" FontSize="18">                            
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Using Metro UI like Windows 8 Metro Apps Design" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>    
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Build with Windows WPF (C# &amp; XAML)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Support on All Windows PC (7,8,10)" FontWeight="SemiBold" FontStretch="SemiCondensed"/>
-                        </TextBlock>
-                    </StackPanel>
+
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="Stego Image"/>
+                        <GroupBox Grid.Column="1" Grid.Row="1" Header="Luminosity" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding LuminanceHistogramPoints}" Stretch="Fill" Fill="Black" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
+                        <GroupBox Grid.Column="1" Grid.Row="2" Header="Red" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding RedColorHistogramPoints}" Stretch="Fill" Fill="Red" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
+                        <GroupBox Grid.Column="1" Grid.Row="3" Header="Green" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding GreenColorHistogramPoints}" Stretch="Fill" Fill="Green" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>
+                        <GroupBox Grid.Column="1" Grid.Row="4" Header="Blue" BorderThickness="0">
+                            <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
+                                <Polygon Points="{Binding BlueColorHistogramPoints}" Stretch="Fill" Fill="Blue" Opacity="0.8" />
+                            </Border>
+                        </GroupBox>                        
+
+
+                    </Grid>
+                    
+                    
+                    
                 </ScrollViewer>
                 <!--Column 3 / Content Area-->
             </Grid>
@@ -96,8 +141,8 @@
                 </Grid.ColumnDefinitions>
                 <Rectangle Grid.ColumnSpan="3" Margin="0,-8,-8,-8" Stroke="Gray" Height="Auto" Width="Auto" StrokeThickness="2" StrokeDashArray="4 4"/>
                 <TextBlock Margin="10,0,0,0" FontSize="18" FontWeight="SemiBold" Text="PictDIFFER (Check &amp; Compare Quality of Picture) | HISTOGRAM"/>
-                <Button Margin="625,0,0,0" Grid.Column="0" Grid.Row="0" Content="Clear All" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-                <Button Margin="10,0,0,0" Grid.Column="1" Grid.Row="0" Content="Execute" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <Button Name="histo_btn_ClearAll" Margin="625,0,0,0" Grid.Column="0" Grid.Row="0" Content="Clear All" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <Button Name="histo_btn_Exec" Margin="10,0,0,0" Grid.Column="1" Grid.Row="0" Content="Execute" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
             </Grid>
             <!--Footer Area -->
 

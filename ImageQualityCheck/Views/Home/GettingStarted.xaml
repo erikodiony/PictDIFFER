@@ -19,12 +19,12 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="0" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
-                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="1" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
-                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="2" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
-                    <Image Margin="0,-30,0,0" Grid.Row="0" Grid.Column="3" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
-                    <Rectangle Grid.Row="1" Grid.ColumnSpan="4" Height="3" Width="450" Margin="150,10,150,10" Fill="Gray"/>
-                </Grid>
+                    <Rectangle Grid.ColumnSpan="4" Margin="0,0,0,0" Stroke="Gray" Height="Auto" Width="Auto" StrokeThickness="2" StrokeDashArray="4 4"/>
+                    <Image Grid.Row="0" Grid.Column="0" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Grid.Row="0" Grid.Column="1" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Grid.Row="0" Grid.Column="2" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Grid.Row="0" Grid.Column="3" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+            </Grid>
                 <!--Header Area-->
 
                 <!--Main Area-->
@@ -45,7 +45,7 @@
                     <!--Column 2-->
 
                     <!--Column 3 / Content Area-->
-                    <ScrollViewer Grid.Column="2" Margin="15,20,0,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
                         <StackPanel>
                             <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
                                 Terdapat 3 Fitur yang menjadi fungsi dasar dari aplikasi ini antara lain <Run FontWeight="SemiBold">Histogram</Run>, <Run FontWeight="SemiBold">Pixel Lookup</Run> dan <Run FontWeight="SemiBold">MSE &amp; PSNR</Run>.

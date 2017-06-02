@@ -7,11 +7,101 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
-        <ScrollViewer>
-            <StackPanel MinWidth="200">
-                <TextBlock Text="BASIC PAGE" Style="{StaticResource Heading2}" />
-                <TextBlock Text="Content goes here" />
-            </StackPanel>
-        </ScrollViewer>
+        <StackPanel>
+
+            <!--Header Area-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Rectangle Grid.ColumnSpan="6" Grid.RowSpan="3" Margin="0,0,0,0" Stroke="Gray" Height="Auto" Width="Auto" StrokeThickness="2" StrokeDashArray="4 4"/>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Margin="18,5,10,5" Text="Choose Cover Image :" FontWeight="SemiBold"/>
+                <Button Grid.Column="0" Grid.Row="1" Margin="18,0,10,0" Height="30" Width="110" Content="Cover Image" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Image Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Width="185" Height="185" Margin="20,-15,20,10" Source="/ImageQualityCheck;component/Images/PictDIFFER.jpg"/>
+
+                <Rectangle Grid.Column="2" Width="3" Margin="10,10,15,10" Grid.RowSpan="3" Fill="Gray"/>
+
+                <TextBlock Grid.Column="3" Grid.Row="0" Margin="10,5,10,5" Text="Choose Stego Image :" FontWeight="SemiBold"/>
+                <Button Grid.Column="3" Grid.Row="1" Margin="10,0,10,0" Height="30" Width="110" Content="Stego Image" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Image Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" Width="185" Height="185" Margin="20,-15,20,10" Source="/ImageQualityCheck;component/Images/PictDIFFER.jpg"/>
+            </Grid>
+            <!--Header Area-->
+
+            <!--Main Area-->
+            <Grid Height="265">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Column 1-->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="&#xE9D2;" Margin="15,20,15,0" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" FontSize="30"/>
+                </StackPanel>
+                <!--Column 1-->
+
+                <!--Column 2-->
+                <Rectangle Grid.Column="1" Margin="15,20,0,20" Width="3" Height="Auto" Fill="Gray"/>
+                <!--Column 2-->
+
+                <!--Column 3 / Content Area-->
+                <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
+                        <Run FontWeight="SemiBold">PictDIFFER</Run> merupakan aplikasi yang berfungsi untuk mengecek dan membandingkan kualitas suatu Citra Digital hasil pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>.
+                    Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
+                        </TextBlock>
+
+                        <TextBlock Margin="15,5,15,5" FontSize="30">
+                            <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
+                            <Run Text="Feature + Benefit"/>
+                        </TextBlock>
+
+                        <TextBlock Margin="10,10,15,10" FontSize="18">                            
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Using Metro UI like Windows 8 Metro Apps Design" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>    
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Build with Windows WPF (C# &amp; XAML)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
+                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
+                    <Run Text="  Support on All Windows PC (7,8,10)" FontWeight="SemiBold" FontStretch="SemiCondensed"/>
+                        </TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
+                <!--Column 3 / Content Area-->
+            </Grid>
+            <!--Main Area-->
+
+            <!--Footer Area -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.ColumnSpan="3" Margin="0,-8,-8,-8" Stroke="Gray" Height="Auto" Width="Auto" StrokeThickness="2" StrokeDashArray="4 4"/>
+                <TextBlock Margin="10,0,0,0" FontSize="18" FontWeight="SemiBold" Text="PictDIFFER (Check &amp; Compare Quality of Picture) | MSE &amp; PSNR"/>
+                <Button Margin="625,0,0,0" Grid.Column="0" Grid.Row="0" Content="Clear All" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <Button Margin="10,0,0,0" Grid.Column="1" Grid.Row="0" Content="Execute" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+            </Grid>
+            <!--Footer Area -->
+
+
+        </StackPanel>
     </Grid>
 </UserControl>

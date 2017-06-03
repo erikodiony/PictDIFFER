@@ -61,64 +61,64 @@
 
                 <!--Column 3 / Content Area-->
                 <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                    <Grid>
+                    <Grid Margin="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="345"/>
+                            <ColumnDefinition Width="345"/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="200"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Cover Image"/>
-                        <GroupBox Grid.Column="0" Grid.Row="1" Header="Luminosity" BorderThickness="0">
+                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Cover Image" Style="{StaticResource Heading2}"/>
+
+                        <GroupBox Margin="5" Grid.Column="0" Grid.Row="1" Header="Blue" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding LuminanceHistogramPoints}" Stretch="Fill" Fill="Black" Opacity="0.8" />
+                                <Polygon Name="blue_cover" Stretch="Fill" Fill="Blue" Opacity="0.8" />
                             </Border>
                         </GroupBox>
-                        <GroupBox Grid.Column="0" Grid.Row="2" Header="Red" BorderThickness="0">
+                        <GroupBox Margin="5" Grid.Column="0" Grid.Row="2" Header="Green" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding RedColorHistogramPoints}" Stretch="Fill" Fill="Red" Opacity="0.8" />
+                                <Polygon Name="green_cover" Stretch="Fill" Fill="Green" Opacity="0.8" />
                             </Border>
                         </GroupBox>
-                        <GroupBox Grid.Column="0" Grid.Row="3" Header="Green" BorderThickness="0">
+                        <GroupBox Margin="5" Grid.Column="0" Grid.Row="3" Header="Red" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding GreenColorHistogramPoints}" Stretch="Fill" Fill="Green" Opacity="0.8" />
+                                <Polygon Name="red_cover" Stretch="Fill" Fill="Red" Opacity="0.8" />
                             </Border>
                         </GroupBox>
-                        <GroupBox Grid.Column="0" Grid.Row="4" Header="Blue" BorderThickness="0">
+                        <GroupBox Margin="5" Grid.Column="0" Grid.Row="4" Header="Alpha" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding BlueColorHistogramPoints}" Stretch="Fill" Fill="Blue" Opacity="0.8" />
+                                <Polygon Name="alpha_cover" Stretch="Fill" Fill="Black" Opacity="0.8" />
                             </Border>
                         </GroupBox>
 
 
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="Stego Image"/>
-                        <GroupBox Grid.Column="1" Grid.Row="1" Header="Luminosity" BorderThickness="0">
+
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
+                        
+                        <GroupBox Margin="5" Grid.Column="1" Grid.Row="1" Header="Blue" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding LuminanceHistogramPoints}" Stretch="Fill" Fill="Black" Opacity="0.8" />
+                                <Polygon Name="blue_stego" Stretch="Fill" Fill="Blue" Opacity="0.8" />
                             </Border>
                         </GroupBox>
-                        <GroupBox Grid.Column="1" Grid.Row="2" Header="Red" BorderThickness="0">
+                        <GroupBox Margin="5" Grid.Column="1" Grid.Row="2" Header="Green" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding RedColorHistogramPoints}" Stretch="Fill" Fill="Red" Opacity="0.8" />
+                                <Polygon Name="green_stego" Stretch="Fill" Fill="Green" Opacity="0.8" />
                             </Border>
                         </GroupBox>
-                        <GroupBox Grid.Column="1" Grid.Row="3" Header="Green" BorderThickness="0">
+                        <GroupBox Margin="5" Grid.Column="1" Grid.Row="3" Header="Red" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding GreenColorHistogramPoints}" Stretch="Fill" Fill="Green" Opacity="0.8" />
+                                <Polygon Name="red_stego" Stretch="Fill" Fill="Red" Opacity="0.8" />
                             </Border>
                         </GroupBox>
-                        <GroupBox Grid.Column="1" Grid.Row="4" Header="Blue" BorderThickness="0">
+                        <GroupBox Margin="5" Grid.Column="1" Grid.Row="4" Header="Alpha" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
-                                <Polygon Points="{Binding BlueColorHistogramPoints}" Stretch="Fill" Fill="Blue" Opacity="0.8" />
+                                <Polygon Name="alpha_stego" Stretch="Fill" Fill="Black" Opacity="0.8" />
                             </Border>
                         </GroupBox>                        
 

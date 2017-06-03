@@ -265,16 +265,6 @@
             </summary>
             <param name="propertyName">Name of the property.</param>
         </member>
-        <member name="M:FirstFloor.ModernUI.Presentation.NotifyPropertyChanged.Set``1(``0@,``0,System.String)">
-            <summary>
-            Updates specified value, and raises the <see cref="E:FirstFloor.ModernUI.Presentation.NotifyPropertyChanged.PropertyChanged"/> event when the value has changed.
-            </summary>
-            <typeparam name="T">The type of the value.</typeparam>
-            <param name="storage">The current stored value</param>
-            <param name="value">The new value</param>
-            <param name="propertyName">The optional property name, automatically set to caller member name when not set.</param>
-            <returns>Indicates whether the value has changed.</returns>
-        </member>
         <member name="T:FirstFloor.ModernUI.Presentation.ReadOnlyLinkGroupCollection">
             <summary>
             Represents a read-only observable collection of link groups.

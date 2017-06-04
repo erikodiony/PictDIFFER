@@ -6,13 +6,13 @@ using System.Windows.Media;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ImageQualityCheck")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PictDIFFER")]
+[assembly: AssemblyDescription("Check & Compare Quality of Picture")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ImageQualityCheck")]
+[assembly: AssemblyCompany("PictDIFFER")]
+[assembly: AssemblyProduct("PictDIFFER")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("PictDIFFER")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 

@@ -74,7 +74,7 @@
                             <RowDefinition Height="200"/>
                         </Grid.RowDefinitions>
 
-                        <TextBlock Grid.Column="0" Grid.Row="0" Text="Cover Image" Style="{StaticResource Heading2}"/>
+                        <TextBlock Name="txt_cover" Grid.Column="0" Grid.Row="0" Text="Cover Image" Style="{StaticResource Heading2}"/>
 
                         <GroupBox Margin="5" Grid.Column="0" Grid.Row="1" Header="Blue" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
@@ -99,7 +99,7 @@
 
 
 
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
+                        <TextBlock Name="txt_stego" Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
                         
                         <GroupBox Margin="5" Grid.Column="1" Grid.Row="1" Header="Blue" BorderThickness="0">
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">

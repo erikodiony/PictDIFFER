@@ -61,30 +61,63 @@
                 <!--Column 2-->
 
                 <!--Column 3 / Content Area-->
-                <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ScrollViewer Grid.Column="2" Margin="15,20,25,20" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <StackPanel>
-                        <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
-                        <Run FontWeight="SemiBold">PictDIFFER</Run> merupakan aplikasi yang berfungsi untuk mengecek dan membandingkan kualitas suatu Citra Digital hasil pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>.
-                    Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
-                        </TextBlock>
+                        <Grid Margin="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="345"/>
+                                <ColumnDefinition Width="345"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="140"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
 
-                        <TextBlock Margin="15,5,15,5" FontSize="30">
-                            <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
-                            <Run Text="Feature + Benefit"/>
-                        </TextBlock>
+                            <TextBlock Name="txt_cover" Grid.Column="0" Grid.Row="0" Text="Cover Image" Style="{StaticResource Heading2}"/>
+                            <Border Margin="3" Grid.Column="0" Grid.Row="1" BorderThickness="1" BorderBrush="Black">
+                                <DataGrid Name="dgrid_cover" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" CanUserResizeRows="False" SelectionMode="Single" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray" GridLinesVisibility="All" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" RowDetailsVisibilityMode="Collapsed" ClipboardCopyMode="None" HorizontalAlignment="Center">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header = "(X,Y)" Width="80" Binding="{Binding PointXY_Cover}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "B" Width="55" Binding="{Binding B_Cover}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "G" Width="55" Binding="{Binding G_Cover}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "R" Width="55" Binding="{Binding R_Cover}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "A" Width="55" Binding="{Binding A_Cover}" CanUserResize="False" CanUserSort="False"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Border>
+                            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="2" Orientation="Horizontal">
+                                <TextBlock Name="infoDisplayData_cover" Margin="1" Text="Total of Data (Cover Image) : -"/>
+                                <TextBlock Margin="20,1,20,1" Text="|"/>
+                                <TextBlock Name="infoDisplayData_stego" Margin="1" Text="Total of Data (Stego Image) : -"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="2" Orientation="Horizontal">
+                                <TextBlock Margin="1" Text="Show of Data " FontWeight="SemiBold" FontSize="16"/>
+                                <TextBox Margin="1" Name="txt_displayData" Text="25" MinWidth="35" MaxWidth="80" Width="Auto"/>
+                                <Button Margin="1" Name="btn_displayData" Content="Execute"/>
+                                <TextBlock Margin="20,1,20,1" Text="|" FontWeight="SemiBold" FontSize="16"/>
+                                <TextBlock Margin="1" Text="Point X " FontWeight="SemiBold" FontSize="16"/>
+                                <TextBox Margin="1" Name="txt_displayData_X" Text="1" MinWidth="35" MaxWidth="80" Width="Auto"/>
+                                <TextBlock Margin="1" Text="Point Y " FontWeight="SemiBold" FontSize="16"/>
+                                <TextBox Margin="1" Name="txt_displayData_Y" Text="1" MinWidth="35" MaxWidth="80" Width="Auto"/>
+                                <Button Margin="1" Name="btn_displayData_Point" Content="Search"/>
+                            </StackPanel>
 
-                        <TextBlock Margin="10,10,15,10" FontSize="18">                            
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Using Metro UI like Windows 8 Metro Apps Design" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>    
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Build with Windows WPF (C# &amp; XAML)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Support on All Windows PC (7,8,10)" FontWeight="SemiBold" FontStretch="SemiCondensed"/>
-                        </TextBlock>
+
+                            <TextBlock Name="txt_stego" Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
+                            <Border Margin="3" Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="Black">
+                                <DataGrid Name="dgrid_stego" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" CanUserResizeRows="False" SelectionMode="Single" HorizontalGridLinesBrush="Gray" VerticalGridLinesBrush="Gray" GridLinesVisibility="All" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" RowDetailsVisibilityMode="Collapsed" ClipboardCopyMode="None" HorizontalAlignment="Center">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header = "(X,Y)" Width="80" Binding="{Binding PointXY_Stego}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "B" Width="55" Binding="{Binding B_Stego}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "G" Width="55" Binding="{Binding G_Stego}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "R" Width="55" Binding="{Binding R_Stego}" CanUserResize="False" CanUserSort="False"/>
+                                        <DataGridTextColumn Header = "A" Width="55" Binding="{Binding A_Stego}" CanUserResize="False" CanUserSort="False"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Border>
+                        </Grid>
                     </StackPanel>
                 </ScrollViewer>
                 <!--Column 3 / Content Area-->

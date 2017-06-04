@@ -237,6 +237,7 @@ namespace ImageQualityCheck.Views.QualityCheck
         void Generate_List_Pixel()
         {
             dp.LookupPixel(getPathCover, getPathStego);
+            dp.SetPixel_ARGBwithPoint(dp.stride_cover, dp.stride_stego);
 
             for (int i = 0; i < dp.PointXY_Cover.Length; i++)
             {

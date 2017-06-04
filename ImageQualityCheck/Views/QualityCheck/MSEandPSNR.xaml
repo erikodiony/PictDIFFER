@@ -63,28 +63,45 @@
                 <!--Column 3 / Content Area-->
                 <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
                     <StackPanel>
-                        <TextBlock Margin="15,0,15,10" FontSize="18" TextWrapping="Wrap">
-                        <Run FontWeight="SemiBold">PictDIFFER</Run> merupakan aplikasi yang berfungsi untuk mengecek dan membandingkan kualitas suatu Citra Digital hasil pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>.
-                    Adapun Format Citra Digital yang didukung adalah Citra Digital dengan Format PNG dengan kedalaman warna 32bit / (BGRA).
-                        </TextBlock>
+                        <Grid Margin="4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="345"/>
+                                <ColumnDefinition Width="345"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="180"/>
+                            </Grid.RowDefinitions>
 
-                        <TextBlock Margin="15,5,15,5" FontSize="30">
-                            <Run Text="&#xE1A6;" FontFamily="Segoe MDL2 Assets"/>
-                            <Run Text="Feature + Benefit"/>
-                        </TextBlock>
+                            <TextBlock Name="txt_cover" Grid.Column="0" Grid.Row="0" Text="Cover Image" Style="{StaticResource Heading2}"/>
+                            <TextBlock Name="txt_stego" Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
+                            <GroupBox Margin="5" Grid.ColumnSpan="2" Grid.Row="1" Header="MSE &amp; PSNR" BorderThickness="1">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="340"/>
+                                        <ColumnDefinition Width="340"/>
+                                    </Grid.ColumnDefinitions>
 
-                        <TextBlock Margin="10,10,15,10" FontSize="18">                            
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Fast Calculate and Detection" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  User Friendly Concept &amp; Easy to Use" FontStretch="SemiCondensed" FontWeight="SemiBold"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Using Metro UI like Windows 8 Metro Apps Design" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>    
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Build with Windows WPF (C# &amp; XAML)" FontWeight="SemiBold" FontStretch="SemiCondensed"/><LineBreak/>
-                <Run Text="&#xE001;" FontSize="22" FontWeight="SemiBold" FontFamily="Segoe MDL2 Assets"/>
-                    <Run Text="  Support on All Windows PC (7,8,10)" FontWeight="SemiBold" FontStretch="SemiCondensed"/>
-                        </TextBlock>
+                                    <StackPanel Grid.Column="0" Orientation="Vertical" Margin="2">
+                                        <TextBlock Margin="4" Name="mse_B" Text="MSE | Blue: -"/>
+                                        <TextBlock Margin="4" Name="mse_G" Text="MSE | Green: -"/>
+                                        <TextBlock Margin="4" Name="mse_R" Text="MSE | Red: -"/>
+                                        <TextBlock Margin="4" Name="mse_A" Text="MSE | Alpha: -"/>
+                                        <Border Margin="4" Background="Gray" Height="2"/>
+                                        <TextBlock Margin="4" Name="mse_All" Text="MSE | All: -"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="1" Orientation="Vertical" Margin="2">
+                                        <TextBlock Margin="4" Name="psnr_B" Text="PSNR | Blue: -"/>
+                                        <TextBlock Margin="4" Name="psnr_G" Text="PSNR | Green: -"/>
+                                        <TextBlock Margin="4" Name="psnr_R" Text="PSNR | Red: -"/>
+                                        <TextBlock Margin="4" Name="psnr_A" Text="PSNR | Alpha: -"/>
+                                        <Border Margin="4" Background="Gray" Height="2"/>
+                                        <TextBlock Margin="4" Name="psnr_All" Text="PSNR | All: -"/>
+                                    </StackPanel>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
                     </StackPanel>
                 </ScrollViewer>
                 <!--Column 3 / Content Area-->

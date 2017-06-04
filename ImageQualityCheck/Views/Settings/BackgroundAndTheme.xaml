@@ -3,49 +3,97 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <ScrollViewer>
-            <StackPanel x:Name="Panel" MinWidth="150">
-                <TextBlock Text="Color" Style="{StaticResource Heading2}" Margin="0,0,0,8" />
-
-                <ListBox ItemsSource="{Binding AccentColors}"
-                         SelectedItem="{Binding SelectedAccentColor, Mode=TwoWay}"
-                         Margin="0,0,0,16">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel MaxWidth="{Binding ActualWidth, ElementName=Panel}" />
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Rectangle Width="40" Height="40" Margin="2" >
-                                <Rectangle.Fill>
-                                    <SolidColorBrush x:Name="Brush" Color="{Binding}" />
-                                </Rectangle.Fill>
-                            </Rectangle>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-
-                <Grid HorizontalAlignment="Left">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition MinWidth="120"/>
-                    </Grid.ColumnDefinitions>
+    <Grid Style="{StaticResource ContentRoot}">
+            <StackPanel>
+                <!--Header Area-->
+                <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-
-                    <TextBlock Text="Theme:" VerticalAlignment="Center" Margin="0,0,16,4" />
-                    <ComboBox Grid.Column="1" ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" DisplayMemberPath="DisplayName" VerticalAlignment="Center" Margin="0,0,0,4" />
-
-                    <TextBlock Grid.Row="1" Text="Font size:" VerticalAlignment="Center" Margin="0,0,16,0" />
-                    <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding FontSizes}" SelectedItem="{Binding SelectedFontSize, Mode=TwoWay}" VerticalAlignment="Center" />
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Rectangle Grid.ColumnSpan="4" Margin="0,0,0,0" Stroke="Gray" Height="Auto" Width="Auto" StrokeThickness="2" StrokeDashArray="4 4"/>
+                    <Image Margin="0,0,0,0" Grid.Row="0" Grid.Column="0" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Margin="0,0,0,0" Grid.Row="0" Grid.Column="1" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Margin="0,0,0,0" Grid.Row="0" Grid.Column="2" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
+                    <Image Margin="0,0,0,0" Grid.Row="0" Grid.Column="3" Height="200" Width="200" Source="/ImageQualityCheck;component/Images/logo.png" Stretch="UniformToFill"/>
                 </Grid>
+                <!--Header Area-->
+
+            <!--Main Area-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Column 1-->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="&#xE115;" Margin="15,20,15,0" FontFamily="Segoe MDL2 Assets" FontWeight="Normal" FontSize="30"/>
+                </StackPanel>
+                <!--Column 1-->
+
+                <!--Column 2-->
+                <Rectangle Grid.Column="1" Margin="15,20,0,20" Width="3" Height="Auto" Fill="Gray"/>
+                <!--Column 2-->
+
+                <!--Column 3 / Content Area-->
+                <ScrollViewer Grid.Column="2" Margin="15,20,25,20" MaxHeight="275" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <Grid Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="345"/>
+                            <ColumnDefinition Width="345"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Margin="3" Grid.Row="0" Text="Theme" Style="{StaticResource Heading2}"/>
+
+                        <StackPanel Margin="3" Name="ThemeColor" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
+                            <ListBox ItemsSource="{Binding AccentColors}" SelectedItem="{Binding SelectedAccentColor, Mode=TwoWay}">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Rectangle Width="25" Height="25" Margin="2" >
+                                            <Rectangle.Fill>
+                                                <SolidColorBrush x:Name="Brush" Color="{Binding}" />
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+
+                        <StackPanel Margin="3" Grid.Row="2" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left">
+                            <TextBlock Margin="3" Text="Background" Style="{StaticResource Heading2}"/>
+                            <ComboBox Margin="3" Width="100" ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" DisplayMemberPath="DisplayName"/>
+                        </StackPanel>
+
+                    </Grid>
+                </ScrollViewer>
+                <!--Column 3 / Content Area-->
+            </Grid>
+            <!--Main Area-->
+
+
+
             </StackPanel>
-        </ScrollViewer>
     </Grid>
 </UserControl>

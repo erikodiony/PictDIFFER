@@ -97,8 +97,6 @@
                             </Border>
                         </GroupBox>
 
-
-
                         <TextBlock Name="txt_stego" Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
                         
                         <GroupBox Margin="5" Grid.Column="1" Grid.Row="1" Header="Blue" BorderThickness="0">
@@ -120,13 +118,8 @@
                             <Border BorderThickness="1" BorderBrush="Black" Background="White" Margin="4">
                                 <Polygon Name="alpha_stego" Stretch="Fill" Fill="Black" Opacity="0.8" />
                             </Border>
-                        </GroupBox>                        
-
-
-                    </Grid>
-                    
-                    
-                    
+                        </GroupBox>
+                    </Grid>                   
                 </ScrollViewer>
                 <!--Column 3 / Content Area-->
             </Grid>

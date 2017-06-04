@@ -15,8 +15,8 @@ namespace ImageQualityCheck.Views.Settings
     public class BackgroundAndTheme_ViewModel
         : NotifyPropertyChanged
     {
-        private const string FontSmall = "small";
-        private const string FontLarge = "large";
+        //private const string FontSmall = "small";
+        //private const string FontLarge = "large";
 
         // 9 accent colors from metro design principles
         /*private Color[] accentColors = new Color[]{
@@ -58,7 +58,6 @@ namespace ImageQualityCheck.Views.Settings
         private Color selectedAccentColor;
         private LinkCollection themes = new LinkCollection();
         private Link selectedTheme;
-        private string selectedFontSize;
 
         public BackgroundAndTheme_ViewModel()
         {
@@ -66,7 +65,6 @@ namespace ImageQualityCheck.Views.Settings
             this.themes.Add(new Link { DisplayName = "dark", Source = AppearanceManager.DarkThemeSource });
             this.themes.Add(new Link { DisplayName = "light", Source = AppearanceManager.LightThemeSource });
 
-            this.SelectedFontSize = AppearanceManager.Current.FontSize == FontSize.Large ? FontLarge : FontSmall;
             SyncThemeAndColor();
 
             AppearanceManager.Current.PropertyChanged += OnAppearanceManagerPropertyChanged;
@@ -94,10 +92,6 @@ namespace ImageQualityCheck.Views.Settings
             get { return this.themes; }
         }
 
-        public string[] FontSizes
-        {
-            get { return new string[] { FontSmall, FontLarge }; }
-        }
 
         public Color[] AccentColors
         {
@@ -120,20 +114,6 @@ namespace ImageQualityCheck.Views.Settings
             }
         }
 
-        public string SelectedFontSize
-        {
-            get { return this.selectedFontSize; }
-            set
-            {
-                if (this.selectedFontSize != value)
-                {
-                    this.selectedFontSize = value;
-                    OnPropertyChanged("SelectedFontSize");
-
-                    AppearanceManager.Current.FontSize = value == FontLarge ? FontSize.Large : FontSize.Small;
-                }
-            }
-        }
 
         public Color SelectedAccentColor
         {

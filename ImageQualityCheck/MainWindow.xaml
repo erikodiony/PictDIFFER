@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         Title="PictDIFFER (Check &amp; Compare Quality of Picture)" IsTitleVisible="True"
-        ContentSource="/Views/Home/StartPage.xaml" WindowStartupLocation="CenterScreen" Width="925" Height="650" ResizeMode="NoResize" Icon="Images/Logo.png" WindowStyle="ToolWindow">
+        ContentSource="/Views/Home/StartPage.xaml" WindowStartupLocation="CenterScreen" Width="925" Height="650" ResizeMode="NoResize" Icon="Images/Icon.png" WindowStyle="ToolWindow">
 
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="home">

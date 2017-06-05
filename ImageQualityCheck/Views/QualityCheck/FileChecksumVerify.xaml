@@ -72,14 +72,7 @@
                             <ColumnDefinition Width="345"/>
                             <ColumnDefinition Width="345"/>
                         </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="180"/>
-                        </Grid.RowDefinitions>
-
-                        <TextBlock Name="txt_cover" Grid.Column="0" Grid.Row="0" Text="Cover Image" Style="{StaticResource Heading2}"/>
-                        <TextBlock Name="txt_stego" Grid.Column="1" Grid.Row="0" Text="Stego Image" Style="{StaticResource Heading2}"/>
-                        <GroupBox Margin="5" Grid.ColumnSpan="2" Grid.Row="1" Header="File Checksum Verify" BorderThickness="1">
+                        <GroupBox Margin="5" Grid.ColumnSpan="2" Header="File Checksum Verify" BorderThickness="1">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="340"/>

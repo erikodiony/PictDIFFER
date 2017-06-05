@@ -110,20 +110,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VsuqWjOYTEHY5YPqaqDONbOzFYI=</dsig:DigestValue>
+        <dsig:DigestValue>AnhmCndeQMKtQaMvvg+6zPdsOpI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <file name="Icon_Desktop.ico" size="4286">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Cexvc9ayddpjsamFxwp7+AEe8EU=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Images\Icon_Desktop.ico" size="4286">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />

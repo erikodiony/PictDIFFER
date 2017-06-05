@@ -65,6 +65,9 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0" FontSize="30">
@@ -97,6 +100,18 @@
                             </TextBlock>
                             <TextBlock Grid.Row="7" FontSize="18" TextWrapping="Wrap">
                                 MSE <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Mean Square Error)"/> adalah nilai error kuadrat rata-rata antara Citra Digital hasil Pengolahan Steganografi <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/> dengan Citra Digital asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/>. Adapun PSNR <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Peak Signal Noise Ratio)"/> adalah perbandingan antara nilai maksimum dari sinyal yang diukur dengan besarnya derau yang berpengaruh pada sinyal tersebut. PSNR biasanya diukur dalam satuan <Run FontWeight="SemiBold" FontStyle="Italic" Text="Decibel / (db)"/>. MSE &amp; PSNR biasa digunakan untuk mengetahui hasil/kualitas teknik Steganografi yang digunakan. Dengan parameter yang digunakan yakni selisih antara nilai <Run FontWeight="SemiBold" FontStyle="Italic" Text="Pixel"/> Citra Digital asli sebelumnya <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Cover Image)"/> dan Citra Digital sesudah diolah <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Stego Image)"/>.
+                            </TextBlock>
+
+                            <!--Line Separator-->
+                            <Rectangle Grid.Row="8" Height="3" Width="150" Margin="150,25,150,10" Fill="Gray"/>
+                            <!--Line Separator-->
+
+                            <TextBlock Grid.Row="9" FontSize="30">
+                                    <Run Text="&#xE192;" FontFamily="Segoe MDL2 Assets"/>
+                                    <Run Text="File Checksum Verify"/>
+                            </TextBlock>
+                            <TextBlock Grid.Row="10" FontSize="18" TextWrapping="Wrap">
+                                Merupakan Fitur yang berfungsi untuk mengecek maupun membandingkan file asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Original File)"/> dengan file hasil ekstraksi Stego Image <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Embedded File)"/>. Adapun proses membandingkannya menggunakan algoritma <Run FontWeight="SemiBold" FontStyle="Italic" Text="MD5"/>, dimana <Run FontWeight="SemiBold" FontStyle="Italic" Text="MD5"/> sendiri berfungsi sebagai pencari nilai <Run FontWeight="SemiBold" FontStyle="Italic" Text="Hash"/> suatu file. Sedangkan manfaat fitur ini adalah untuk menegaskan bahwa dalam hal ekstraksi file Stego Image <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Embedded File)"/> apakah telah terjadi perubahan struktur file terhadap file asli <Run FontWeight="SemiBold" FontStyle="Italic" Text="(Original File)"/> ataupun tidak.
                             </TextBlock>
                         </Grid>
                             

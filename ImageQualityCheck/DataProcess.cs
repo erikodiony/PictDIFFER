@@ -38,6 +38,7 @@ namespace PictDIFFER
         public static readonly string Process_Complete_Histogram = "Building Histogram data was completed ! Process Successfully...";
         public static readonly string Process_Complete_PixelLookup = "Building Pixel Lookup data was completed ! Process Successfully...";
         public static readonly string Process_Complete_MSEandPSNR = "Building MSE & PSNR data was completed ! Process Successfully...";
+        public static readonly string Process_Complete_FileChecksumVerify = "Building MD5 hash data was completed ! Process Successfully...";
         #endregion
         
         #region for Notify Pixel Lookup

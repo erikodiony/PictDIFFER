@@ -79,6 +79,7 @@ namespace PictDIFFER.Views.QualityCheck
             SetTextOrigin_Clear();
             SetTextEmbed_Clear();
             SetHashValue_Clear();
+            FirstFloor.ModernUI.Windows.Controls.ModernDialog.ShowMessage(NotifyDataText.Clear_Input_Img, NotifyDataText.Capt_Success, MessageBoxButton.OK);
         }
         
         void checksum_btn_Exec_Click(object sender, RoutedEventArgs e)
@@ -88,7 +89,7 @@ namespace PictDIFFER.Views.QualityCheck
                 if (FirstFloor.ModernUI.Windows.Controls.ModernDialog.ShowMessage(NotifyDataText.Confirm_Exec_Process_Img, NotifyDataText.Capt_Confirm, MessageBoxButton.OKCancel) == MessageBoxResult.OK)
                 {
                     Exec_Process();
-                    FirstFloor.ModernUI.Windows.Controls.ModernDialog.ShowMessage(NotifyDataText.Process_Complete_Histogram, NotifyDataText.Capt_Success, MessageBoxButton.OK);
+                    FirstFloor.ModernUI.Windows.Controls.ModernDialog.ShowMessage(NotifyDataText.Process_Complete_FileChecksumVerify, NotifyDataText.Capt_Success, MessageBoxButton.OK);
                 }
             }
             else

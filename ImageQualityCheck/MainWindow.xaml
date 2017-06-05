@@ -17,7 +17,7 @@
                 <mui:Link DisplayName="Histogram" Source="/Views/QualityCheck/Histogram.xaml" />
                 <mui:Link DisplayName="Pixel Lookup" Source="/Views/QualityCheck/PixelLookup.xaml" />
                 <mui:Link DisplayName="MSE &amp; PSNR" Source="/Views/QualityCheck/MSEandPSNR.xaml" />
-                <mui:Link DisplayName="File Checksum Verify" Source="/Views/QualityCheck/FileVerify.xaml" />
+                <mui:Link DisplayName="File Checksum Verify" Source="/Views/QualityCheck/FileChecksumVerify.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings">

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\KodeProgram\PictDIFFER\ImageQualityCheck\App.xaml
-10626813371
+10-1619759135
 2-550746379
-16-1414747180
+16954431257
 18-1609701861
-Views\About\AboutMe.xaml;Views\About\AppDetail.xaml;MainWindow.xaml;Views\Home\GettingStarted.xaml;Views\Home\StartPage.xaml;Views\QualityCheck\FileVerify.xaml;Views\QualityCheck\Histogram.xaml;Views\QualityCheck\MSEandPSNR.xaml;Views\QualityCheck\PixelLookup.xaml;Views\Settings\BackgroundAndTheme.xaml;
+Views\About\AboutMe.xaml;Views\About\AppDetail.xaml;MainWindow.xaml;Views\Home\GettingStarted.xaml;Views\Home\StartPage.xaml;Views\QualityCheck\FileChecksumVerify.xaml;Views\QualityCheck\Histogram.xaml;Views\QualityCheck\MSEandPSNR.xaml;Views\QualityCheck\PixelLookup.xaml;Views\Settings\BackgroundAndTheme.xaml;
 
 False
 

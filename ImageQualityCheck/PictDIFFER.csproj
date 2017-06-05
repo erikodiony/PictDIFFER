@@ -146,7 +146,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\QualityCheck\FileVerify.xaml">
+    <Page Include="Views\QualityCheck\FileChecksumVerify.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -168,8 +168,8 @@
     <Compile Include="Views\Home\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\QualityCheck\FileVerify.xaml.cs">
-      <DependentUpon>FileVerify.xaml</DependentUpon>
+    <Compile Include="Views\QualityCheck\FileChecksumVerify.xaml.cs">
+      <DependentUpon>FileChecksumVerify.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\QualityCheck\Histogram.xaml.cs">
       <DependentUpon>Histogram.xaml</DependentUpon>

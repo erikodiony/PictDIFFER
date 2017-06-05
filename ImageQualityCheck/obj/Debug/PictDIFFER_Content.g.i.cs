@@ -9,6 +9,5 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icon_desktop.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icon_desktop.ico")]
 
 

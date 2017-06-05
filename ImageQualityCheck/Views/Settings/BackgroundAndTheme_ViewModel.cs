@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace ImageQualityCheck.Views.Settings
+namespace PictDIFFER.Views.Settings
 {
     /// <summary>
     /// A simple view model for configuring theme, font and accent colors.

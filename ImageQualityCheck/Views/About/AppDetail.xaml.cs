@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 
-namespace ImageQualityCheck.About
+namespace PictDIFFER.About
 {
     /// <summary>
     /// Interaction logic for AppDetail.xaml

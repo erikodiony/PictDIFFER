@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageQualityCheck.About
+namespace PictDIFFER.About
 {
     /// <summary>
     /// Interaction logic for AboutMe.xaml

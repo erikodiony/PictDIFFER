@@ -1,4 +1,4 @@
-﻿<mui:ModernWindow x:Class="ImageQualityCheck.MainWindow"
+﻿<mui:ModernWindow x:Class="PictDIFFER.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
@@ -17,6 +17,7 @@
                 <mui:Link DisplayName="Histogram" Source="/Views/QualityCheck/Histogram.xaml" />
                 <mui:Link DisplayName="Pixel Lookup" Source="/Views/QualityCheck/PixelLookup.xaml" />
                 <mui:Link DisplayName="MSE &amp; PSNR" Source="/Views/QualityCheck/MSEandPSNR.xaml" />
+                <mui:Link DisplayName="File Checksum Verify" Source="/Views/QualityCheck/FileVerify.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
         <mui:LinkGroup DisplayName="settings">

@@ -13,9 +13,11 @@ using System.Net;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Input;
-using ImageQualityCheck.Views.QualityCheck;
+using PictDIFFER.Views.QualityCheck;
+using Microsoft.Win32;
+using System.Security.Cryptography;
 
-namespace ImageQualityCheck
+namespace PictDIFFER
 {
     internal static class NotifyDataText
     {
@@ -44,6 +46,10 @@ namespace ImageQualityCheck
         public static readonly string Notify_PixelLookup_MemoryLeak = "This process can consumption a lot of memory & takes a lot of time ! Click 'OK' to continue...";
         #endregion
 
+        #region for Notify File Checksum Verify
+        public static readonly string Hash_Identic = "File is Same / Identic";
+        public static readonly string Hash_Err = "File isn't Same / Identic";
+        #endregion        
     }
 
     class DataProcess
@@ -344,5 +350,40 @@ namespace ImageQualityCheck
             return val;
         }
         #endregion
+
+        #region File Verify Controller
+        public string[] getFileInfo(OpenFileDialog file)
+        {
+            string[] val = new string[4];
+            val[0] = file.SafeFileName;
+            val[1] = new FileInfo(file.FileName).Length.ToString();
+            val[2] = new FileInfo(file.FileName).Extension;
+            val[3] = file.FileName.Replace("\\" + file.SafeFileName, String.Empty);
+            return val;
+        }
+
+        public string checkMD5(string pathFile)
+        {
+            byte[] data;
+            using (MD5 check_md5 = MD5.Create())
+            {
+                using (Stream streamFile = File.OpenRead(pathFile))
+                {
+                    data = check_md5.ComputeHash(streamFile);
+                }
+            }
+
+            StringBuilder sBuilder = new StringBuilder();
+            // Loop through each byte of the hashed data 
+            // and format each one as a hexadecimal string.
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+            // Return the hexadecimal string.
+            return sBuilder.ToString();
+        }
+        #endregion
+
     }
 }

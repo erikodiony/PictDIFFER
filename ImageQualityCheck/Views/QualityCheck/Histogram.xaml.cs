@@ -14,7 +14,7 @@ using AForge.Imaging;
 using System.Collections.Generic;
 
 
-namespace ImageQualityCheck.Views.QualityCheck
+namespace PictDIFFER.Views.QualityCheck
 {
     /// <summary>
     /// Interaction logic for Histogram.xaml
@@ -53,7 +53,7 @@ namespace ImageQualityCheck.Views.QualityCheck
         void histo_btn_cover_Click(object sender, RoutedEventArgs e)
         {
             opendlg = new OpenFileDialog();
-            opendlg.Filter = "Image Files|*.png";
+            opendlg.Filter = "Image Files (Cover Image)|*.png";
             if (opendlg.ShowDialog() == true)
             {
                 getPathCover = opendlg.FileName;
@@ -78,7 +78,7 @@ namespace ImageQualityCheck.Views.QualityCheck
         void histo_btn_stego_Click(object sender, RoutedEventArgs e)
         {
             opendlg = new OpenFileDialog();
-            opendlg.Filter = "Image Files|*.png";
+            opendlg.Filter = "Image Files (Stego Image)|*.png";
             if (opendlg.ShowDialog() == true)
             {
                 getPathStego = opendlg.FileName;

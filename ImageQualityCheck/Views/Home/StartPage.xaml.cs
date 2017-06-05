@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageQualityCheck.Views.Home
+namespace PictDIFFER.Views.Home
 {
     /// <summary>
     /// Interaction logic for StartPage.xaml

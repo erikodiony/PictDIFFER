@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ImageQualityCheck
+namespace PictDIFFER
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

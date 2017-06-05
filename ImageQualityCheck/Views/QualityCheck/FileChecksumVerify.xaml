@@ -99,7 +99,7 @@
                                 </StackPanel>
 
                                 <StackPanel Margin="0,75,0,0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <Border Margin="8" Height="45" Width="Auto" BorderThickness="1" BorderBrush="Black" VerticalAlignment="Center" >
+                                    <Border Margin="8" Height="45" Width="Auto" BorderThickness="1" BorderBrush="Gray" VerticalAlignment="Center" >
                                         <TextBlock Margin="5" Name="hash_compare" Text="Unidentified" FontSize="20" FontWeight="SemiBold"/>
                                     </Border>
                                 </StackPanel>

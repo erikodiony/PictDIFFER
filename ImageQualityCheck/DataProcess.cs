@@ -187,9 +187,9 @@ namespace PictDIFFER
                 for (int x = 0; x < bmp_cover_raw.PixelWidth; x++)
                 {
                     int index = y * stride_cover + 4 * x;
-                    byte red = pixel_cover[index];
+                    byte blue = pixel_cover[index];
                     byte green = pixel_cover[index + 1];
-                    byte blue = pixel_cover[index + 2];
+                    byte red = pixel_cover[index + 2];
                     byte alpha = pixel_cover[index + 3];
 
                     PointXY_Cover[idx_cover] = String.Format("({0},{1})", x + 1, y + 1);
@@ -208,9 +208,9 @@ namespace PictDIFFER
                 for (int x = 0; x < bmp_stego_raw.PixelWidth; x++)
                 {
                     int index = y * stride_stego + 4 * x;
-                    byte red = pixel_stego[index];
+                    byte blue = pixel_stego[index];
                     byte green = pixel_stego[index + 1];
-                    byte blue = pixel_stego[index + 2];
+                    byte red = pixel_stego[index + 2];
                     byte alpha = pixel_stego[index + 3];
 
                     PointXY_Stego[idx_stego] = String.Format("({0},{1})", x + 1, y + 1);
@@ -227,18 +227,18 @@ namespace PictDIFFER
         public void GetPositionXY(int PointX, int PointY, int stride_cover, int stride_stego)
         {
             int index_cover = (PointY - 1) * stride_cover + 4 * (PointX - 1); //-1 for array index
-            byte red_cover = pixel_cover[index_cover];
+            byte blue_cover = pixel_cover[index_cover];
             byte green_cover = pixel_cover[index_cover + 1];
-            byte blue_cover = pixel_cover[index_cover + 2];
+            byte red_cover = pixel_cover[index_cover + 2];
             byte alpha_cover = pixel_cover[index_cover + 3];
             dgrid_cover_list2.Clear();
             dgrid_cover_list2.Add(new PixelLookup.Point_Cover() { PointXY_Cover = String.Format("({0},{1})",PointX.ToString(), PointY.ToString()), B_Cover = blue_cover.ToString(), G_Cover = green_cover.ToString(), R_Cover = red_cover.ToString(), A_Cover = alpha_cover.ToString() });
             //System.Diagnostics.Debug.WriteLine("X:{6} | Y:{5} STRIDE {4} || R {0} | G {1} | B {2} | A {3}", red_cover, green_cover, blue_cover, alpha_cover, index_cover, PointY, PointX);
 
             int index_stego = (PointY - 1) * stride_stego + 4 * (PointX - 1); //-1 for array index
-            byte red_stego = pixel_stego[index_stego];
+            byte blue_stego = pixel_stego[index_stego];
             byte green_stego = pixel_stego[index_stego + 1];
-            byte blue_stego = pixel_stego[index_stego + 2];
+            byte red_stego = pixel_stego[index_stego + 2];
             byte alpha_stego = pixel_stego[index_stego + 3];
             dgrid_stego_list2.Clear();
             dgrid_stego_list2.Add(new PixelLookup.Point_Stego() { PointXY_Stego = String.Format("({0},{1})", PointX.ToString(), PointY.ToString()), B_Stego = blue_stego.ToString(), G_Stego = green_stego.ToString(), R_Stego = red_stego.ToString(), A_Stego = alpha_stego.ToString() });
